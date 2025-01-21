@@ -27,6 +27,5 @@ resource "aws_instance" "jumphost01" {
     (crontab -l 2>/dev/null || echo ""; echo "* * * * *  telnet 10.0.3.33 3306 -t 10 >> /tmp/DB.log") | crontab -
     (crontab -l 2>/dev/null || echo ""; echo "* * * * *  telnet 10.0.3.23 3306 -t 10 >> /tmp/DB.log") | crontab -
     (crontab -l 2>/dev/null || echo ""; echo "* * * * *  telnet 10.0.2.43 3306 -t 10 >> /tmp/DB.log") | crontab -
-    (crontab -l 2>/dev/null || echo ""; echo "* * * * *  ${azurerm_linux_virtual_machine.ticketing-jump01.public_ip_address}"  22 -t 10 >> /tmp/DB.log") | crontab -
   EOF
 }
