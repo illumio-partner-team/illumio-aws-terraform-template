@@ -12,6 +12,7 @@ resource "aws_instance" "pos-web01-prd" {
     Name  = "pos-web01-prd"
     Env = "prod"
     Role = "web"
+    Application = "pos"
   }
 
   user_data = <<-EOF
@@ -41,6 +42,7 @@ resource "aws_instance" "pos-proc01-prd" {
     Name  = "pos-proc01-prd"
     Env = "prod"
     Role = "proc"
+    Application = "pos"
   }
 
   user_data = <<-EOF
@@ -70,6 +72,7 @@ resource "aws_instance" "pos-db01-prd" {
     Name  = "pos-db01-prd"
     Env = "prod"
     Role = "proc"
+    Application = "pos"
   }
 
   user_data = <<-EOF
@@ -102,6 +105,7 @@ resource "aws_instance" "hr-web01-prd" {
     Name  = "hr-web01-prd"
     Env = "prod"
     Role = "web"
+    Application = "hr"
   }
 
   user_data = <<-EOF
@@ -130,6 +134,7 @@ resource "aws_instance" "hr-proc01-prd" {
     Name  = "hr-proc01-prd"
     Env = "prod"
     Role = "proc"
+    Application = "hr"
   }
 
   user_data = <<-EOF
@@ -159,6 +164,7 @@ resource "aws_instance" "hr-db01-prd" {
     Name  = "hr-db01-prd"
     Env = "prod"
     Role = "db"
+    Application = "hr"
   }
 
   user_data = <<-EOF
@@ -191,6 +197,7 @@ resource "aws_instance" "crm-web01-prd" {
     Name  = "crm-web01-prd"
     Env = "prod"
     Role = "web"
+    Application = "crm"
   }
 
   user_data = <<-EOF
@@ -220,6 +227,7 @@ resource "aws_instance" "crm-proc01-prd" {
     Name  = "crm-proc01-prd"
     Env = "prod"
     Role = "proc"
+    Application = "crm"
   }
 
   user_data = <<-EOF
@@ -249,6 +257,7 @@ resource "aws_instance" "crm-db01-prd" {
     Name  = "crm-db01-prd"
     Env = "prod"
     Role = "db"
+    Application = "crm"
   }
 
   user_data = <<-EOF
